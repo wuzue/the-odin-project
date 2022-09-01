@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'op-font';
+    src: url("/landing-page/assets/fonts/op-font.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'op-font';
+    /* border: 2px solid red; */
+}
+
+
+#img-logo {
+    width: 100px;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+}
+
+.top-navbar-items {
+    padding: 30px 10px 10px 10px;
+}
+
+.top-navbar-items a {
+    margin: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+/* END OF TOP NAVBAR */
+
+#crew-content1 {
+    height:80vh;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.first-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: plum;
+}
+
+.content1 {
+    font-size: 2.5rem;
+    text-align: justify;
+    padding: 2%;
+}
