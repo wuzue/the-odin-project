@@ -115,9 +115,12 @@ figcaption {
     font-weight: bold;
     font-style: italic;
 }
+/*END OF SECOND SECTION*/
+
 
 .third-section {
     background-color:blanchedalmond;
+    padding-bottom: 20px;
 }
 
 .title-third-section {
@@ -132,4 +135,45 @@ figcaption {
     display: block;
     height: 80px;
     width: 200px;
+}
+/* END OF THIRD SECTION*/
+
+.fourth-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aliceblue;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+.fourth-left {
+
+}
+
+.fourth-middle {
+    
+}
+
+.title-fourth-section-left, .title-fourth-section-middle, .title-fourth-section-right{
+    font-size: 2rem;
+}
+
+.fourth-section button, input {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+}
+
+.join-us-mail::placeholder {
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.brook-button, .sanji-button, .join-us-button {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #5e5e5e;
 }
