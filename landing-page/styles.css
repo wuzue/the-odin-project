@@ -3,6 +3,10 @@
     src: url("/landing-page/assets/fonts/op-font.ttf");
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -50,4 +54,82 @@
     font-size: 2.5rem;
     text-align: justify;
     padding: 2%;
+}
+/* END OF FIRST SECTION*/
+
+.second-section {
+    margin-bottom: 15px;
+}
+
+.top-second-section {
+    font-size:3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.items-members-second-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px
+}
+
+.items-members-second-section img {
+    width:200px;
+}
+
+.title-second-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 4rem;
+}
+
+.items-members-second-section-second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px
+}
+
+.items-members-second-section-second-row img {
+    width: 200px;
+}
+
+.items-members-second-section-third-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px
+}
+
+.items-members-second-section-third-row img {
+    width: 200px;
+}
+
+figcaption {
+    font-family: 'tahoma';
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.third-section {
+    background-color:blanchedalmond;
+}
+
+.title-third-section {
+    text-align: center;
+    font-size: 4rem;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.button-third {
+    margin:0 auto;
+    display: block;
+    height: 80px;
+    width: 200px;
 }
