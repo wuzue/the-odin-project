@@ -135,6 +135,8 @@ figcaption {
     display: block;
     height: 80px;
     width: 200px;
+    font-size: 1.4rem;
+    font-style: italic;
 }
 /* END OF THIRD SECTION*/
 
