@@ -1,3 +1,4 @@
+//js
 let rounds = 6;
 let playerGo;
 let playerPoints = 0;
