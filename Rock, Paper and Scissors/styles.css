@@ -1,0 +1,44 @@
+body {
+    background-color: ghostwhite;
+    color: black;
+}
+
+h1,h2 {
+    text-align: center;
+    font-family: Tahoma;
+}
+
+.buttons{
+    text-align: center;
+}
+
+button {
+    border-radius: 50%;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.text-line{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Tahoma;
+}
+
+#player-score{
+    color: navy;
+}
+
+#comp-score {
+    color: red;
+}
+
+.text-2nd {
+    text-align: center;
+    font-size: 1.5rem;
+    color:brown;
+    font-family: sans-serif;
+}

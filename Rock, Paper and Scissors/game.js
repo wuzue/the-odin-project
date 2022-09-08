@@ -1,97 +1,93 @@
-//js
-let rounds = 6;
-let playerGo;
-let playerPoints = 0;
-let computerPoints = 0;
+let compChoice = {Value: ""};
+let playerChoice;
+let compChoiceInt = 0;
+let playerChoiceInt = 0;
+const buttons = document.querySelectorAll('.btn');
 
-//atribuindo valores numericos as palavras,
-// rock = 1, paper = 2, scissor = 3
+let playerScore = 0;
+let compScore = 0;
 
-function computerPlay() {
-    computerChoice = Math.floor(Math.random()*3) + 1;
+const player = document.querySelector("#player-score");
+player.textContent = `Player Score: ${playerScore}`;
 
-    if (computerChoice === 1){
-        computerChoice = 'rock';
+const computer = document.querySelector("#comp-score");
+computer.textContent = `Computer Score: ${compScore}`;
+
+const output = document.querySelector("#output");
+output.textContent = "Get ready for the battle!"
+
+
+buttons.forEach((button)=>{button.addEventListener('click',()=>{
+
+    playerChoice = button.id;
+    if (playerChoice == "rock"){
+        playerChoiceInt = 0;
     }
-    if (computerChoice === 2){
-        computerChoice = 'paper';
+    else if (playerChoice == "paper"){
+        playerChoiceInt = 1;
     }
-    if (computerChoice === 3){
-        computerChoice = 'scissor';
+    else if (playerChoice == "scissors")
+    {
+        playerChoiceInt = 2;
     }
+    compChoiceInt = computerPlay(compChoice);
+    playGame();
+    })
 
-    console.log(`Computer chooses: ${computerChoice}`);
+})
+
+function computerPlay(compChoice){
+    let choiceNum = Math.floor(Math.random() * 3);
+    if (choiceNum == 0){
+        compChoice.Value = "rock";
+    }
+    else if (choiceNum == 1){
+        compChoice.Value = "paper";
+    }
+    else if(choiceNum == 2){
+        compChoice.Value = "scissors";
+    }
+    return choiceNum;
 }
-
-//agora preciso fazer a vez do jogador jogar
-/* preciso pegar a jogada do jogador, printar no console o que ele escolheu,
- e determinar qual jogada vence qual*/
 
 function playRound(){
-    playerGo = prompt("Insira sua jogada - 'rock', 'paper' or 'scissor': ");
-    console.log(`Player chooses: ${playerGo}`);
-    computerPlay();
+        let win_array = [[0, 2, 1], 
+                        [1, 0, 2], 
+                        [2, 1, 0]];
+    let result = win_array[playerChoiceInt][compChoiceInt];
+    if (result == 0){
+    output.textContent = `Its a tie! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+    }
+    else if (result == 1){
+    output.textContent = `You won! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+    playerScore++;
 
-    if(playerGo === "rock" && computerChoice === "rock"){
-        console.log("Its a tie");
-        playerPoints++;
-        computerPoints++;
     }
-    if(playerGo === "paper" && computerChoice === "paper"){
-        console.log("Its a tie");
-        playerPoints++;
-        computerPoints++;
-    }
-    if(playerGo === "scissor" && computerChoice === "scissor"){
-        console.log("Its a tie");
-        playerPoints++;
-        computerPoints++;
-    }
-
-    if(playerGo === "rock" && computerChoice === "paper"){
-        console.log("Computer won!");
-        computerPoints++;
-    }
-    if(playerGo === "rock" && computerChoice === "scissor"){
-        console.log("Player won!");
-        playerPoints++;
-    }
-
-    if(playerGo === "paper" && computerChoice === "scissor"){
-        console.log("Computer won!");
-        computerPoints++;
-    }
-    if(playerGo === "paper" && computerChoice === "rock"){
-        console.log("Player won!");
-        playerPoints++;
-    }
-
-    if(playerGo === "scissor" && computerChoice === "paper"){
-        console.log("Player won!");
-        playerPoints++;
-    }
-    if(playerGo === "scissor" && computerChoice === "rock"){
-        console.log("Computer won!");
-        computerPoints++;
+    else if (result == 2){
+    output.textContent = `You lost! You chose ${playerChoice} and The computer chose ${compChoice.Value}`;
+    compScore++;
     }
 }
 
-function game() {
-    for(let i = 0; i < 6; i++){
-        console.log(`Rounds left: ${rounds}`);
-        rounds -= 1;
-        playRound()
-        if (rounds === 0) {
-            console.log("Battle Finished!!\n");
-            if (playerPoints > computerPoints){
-                console.log(`Player won! ${playerPoints} points against ${computerPoints}`)
-            } else if (playerPoints === computerPoints){
-                console.log(`It was a draw! Player: ${playerPoints} points, and computer had ${computerPoints}`)
-            } else {
-                console.log(`Computer wins! ${computerPoints} points against ${playerPoints}`)
-            }
+function playGame(){
+        output.textContent = "Choose Rock, Paper, or Scissors";
+        playRound();
+        player.textContent = `Player Score: ${playerScore}`;
+        computer.textContent = `Computer Score: ${compScore}`;
+        if (playerScore == 5){
+            alert(`You Won the Game! \nYou scored ${playerScore} points, and the computer ${compScore} points.`);
+            // output.textContent = "You Won the Game! Congrats";
+            playerScore = 0;
+            compScore = 0;
+            player.textContent = `Player Score: ${playerScore}`;
+            computer.textContent = `Computer Score: ${compScore}`;
         }
-    }
+        else if (compScore == 5){
+           alert(`You Lost the game :c\nYou scored ${playerScore} points, and the computer ${compScore} points.`);
+            //output.textContent = "You Lost the game:/ Maybe find something else to do?"
+            playerScore = 0;
+            compScore = 0;
+            player.textContent = `Player Score: ${playerScore}`;
+            computer.textContent = `Computer Score: ${compScore}`;
+        }
 }
-
-game();
