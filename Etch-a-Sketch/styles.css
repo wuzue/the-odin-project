@@ -3,12 +3,46 @@
     --linhas: 1;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(240, 240, 37);
+    margin-top: -30px;
+}
+
+div {
+    background-color: white;
+    border: 1px solid black;
+}
+
+
 #container {
-    position: absolute;
+
+    margin-top: 50px;
+    display: inline-grid;
+    grid-template-columns: repeat(16, 2fr);
+    grid-template-rows: repeat(16, 2fr);
+    border: 5px solid white;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
+    background-color: gray;
+    box-shadow: 10px 10px;
+    
+}
+
+/* CODE BELOW WORKS TOO!!! 
+BUT I WAS HAVING A PROBLEM TO RESIZE THE CANVAS DIV, WAS TOO BIG
+#container {
+    
     display: grid;
-    /* grid-gap: 1em; */
+    grid-gap: 1em;
     grid-template-columns: repeat(var(--colunas), 1fr);
     grid-template-rows: repeat(var(--linhas), 1fr);
+    height: 100vh;
+    width: 100vw;
 }
 
 .square-item{
@@ -18,14 +52,6 @@
     width: 50px;
     height: 50px;
     padding: 1em;
-    border: 1px solid red;
+    border: 1px solid;
 }
-
-#teste {
-    display: flex;
-    right:0px;
-    margin:0 auto;
-    width: 50px;
-    height: 50px;
-    border: 2px solid green;
-}
+*/
