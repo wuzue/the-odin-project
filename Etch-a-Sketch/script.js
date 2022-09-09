@@ -5,21 +5,15 @@ function doRow(rows, cols){
 	container.style.setProperty('--colunas', cols);
 	for (let i = 0; i < (rows * cols); i++){
 		let square = document.createElement('div');
-		square.innerText = "box " + (i + 1);
-		container.appendChild(square).className = 'square-item';
+		square.addEventListener('click', () => square.style.backgroundColor = 'red');
+		//square.innerText = i;
+		container.appendChild(square).className = 'square-item ' + i;
+		
 	};
 };
 
-doRow(5,5);
+doRow(16,16);
 
-const selectSquare = document.getElementsByClassName('square-item');
+// const selectSquare = document.querySelector(".square-item");
 
-function sayHi(){
-	alert("hi");
-};
-
-//selectSquare.addEventListener("click", sayHi);
-
-const me = document.querySelector('#me');
-
-me.addEventListener('click', sayHi);
+// selectSquare.addEventListener('click', () => selectSquare.style.backgroundColor = 'red');
