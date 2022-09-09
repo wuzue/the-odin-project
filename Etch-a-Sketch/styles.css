@@ -33,6 +33,43 @@ div {
     
 }
 
+.sliderSet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+
+#slider{
+    -webkit-appearance: none;
+    background: black;
+    outline: none;
+    border-radius: 50px;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    width: 25px; 
+    height: 25px; 
+    background: white; 
+    border-radius: 50px;
+}
+
+#slider::-moz-range-thumb{
+    width: 25px; 
+    height: 25px; 
+    background: white; 
+    border-radius: 50px;
+}
+
+.setSliderValue{
+    font-size: 30px;
+    padding-left: 10px;
+    color: black;
+    text-shadow: 2px 2px white;
+
+}
+
 /* CODE BELOW WORKS TOO!!! 
 BUT I WAS HAVING A PROBLEM TO RESIZE THE CANVAS DIV, WAS TOO BIG
 #container {
