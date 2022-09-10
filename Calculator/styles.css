@@ -38,6 +38,14 @@
     margin-bottom: 10px;
 }
 
+#text-display { 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15vh;
+    font-size: 30px;
+    font-weight:bold;
+}
+
 #controller-buttons { 
     width: 50%;
     margin: 0 auto;
@@ -49,6 +57,10 @@
     margin: 0 auto;
     width: 6vw;;
     height: 5vh;
+    background-color: var(--color-orange);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:30px
 }
 
 #below-controls {
@@ -62,7 +74,12 @@
     padding: 10px;
 }
 
-#numbers {
+.number {
+    display:inline-table;
+}
+
+#number-1, #number-2, #number-3, #number-4, #number-5, #number-6,
+#number-7, #number-8, #number-9, #number-0 {
     background-color: var(--color-orange);
     border: 1px solid black;
     padding: 20px;
@@ -71,7 +88,7 @@
     font-weight: bold;
 }
 
-#empty-numbers {
+#empty-number-left, #empty-number-right {
     background-color: var(--color-black);
     border:none;
 }

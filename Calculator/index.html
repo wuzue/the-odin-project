@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src ="scripts.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <div id="calculator-main">
         <div id="calculator-structure">
             <div id="calculator-screen">
-
+                <p id="text-display"></p>
             </div>
 
             <hr>
@@ -31,6 +31,8 @@
 
             <hr id="below-controls">
 
+            <!-- ORIGINAL CODE, WORKING, BUT HARD TO
+                DISPLAY CLICKED NUMBERS IN THE SCREEN!
             <div id="calculator-numbers">
                 <button id="numbers">1</button>
                 <button id="numbers">2</button>
@@ -41,10 +43,26 @@
                 <button id="numbers">7</button>
                 <button id="numbers">8</button>
                 <button id="numbers">9</button>
-                <button id="empty-numbers"></button>
+                <button id="empty-number-left"></button>
                 <button id="numbers">0</button>
-                <button id="empty-numbers"></button>
+                <button id="empty-number-right"></button>
             </div>
+            -->
+
+            <h1><div id="entry"></div></h1>
+            <div class="number"><h1>1</h1></div>
+            <div class="number"><h1>2</h1></div>
+            <div class="number"><h1>3</h1></div><br>
+
+            <div class="number"><h1>4</h1></div>
+            <div class="number"><h1>5</h1></div>
+            <div class="number"><h1>6</h1></div><br>
+
+            <div class="number"><h1>7</h1></div>
+            <div class="number"><h1>8</h1></div>
+            <div class="number"><h1>9</h1></div><br>
+
+            <div class="number "><h1>C</h1></div>
 
             <hr>
 
@@ -55,6 +73,6 @@
         </div>
 
     </div>
-
+    <script src ="scripts.js"></script>
 </body>
 </html>
