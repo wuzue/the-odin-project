@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+* {
+    margin:0;
+    font-family: 'Poppins';
+}
+
+@font-face {
+    font-family: 'onePiece';
+    src: url(../assets/fonts/op-font.ttf);
+}
+
+#main-header {
+    text-align: center;
+}
+
+#title-main{
+    font-family: onePiece;
+    font-size: 3rem;
+}
+
+#desc-title {
+    font-family: Poppins;
+    font-size: 1.1rem;
+
+}
+
+.form-main{ 
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+fieldset{
+    border: 0;
+}
+
+#field-legend {
+   color: transparent;
+}
+
+.form-group {
+    background-color: #b4cfb0;
+    width: 60%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    margin: auto;
+    border-radius: 1px 1px;
+}
+
+.form-group:nth-child(2){
+    border-radius: 4px 4px 0 0;
+    padding-top:16px;
+}
+
+.form-group:nth-child(8){
+    border-radius: 0 0 4px 4px;
+}
+
+b {
+    font-family: 'Poppins';
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-radio {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+label {
+    display: block;
+}
+
+#name-field, #email-field,
+#username-field, #pass-field,
+#confirm-pass-field {
+    width: 99%;
+    border: none;
+    border-radius: 4px 4px;
+}
+
+.b-main {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgb(28,184,65);
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.b-main:hover {
+    cursor: pointer;
+    background-color: green;
+}
+

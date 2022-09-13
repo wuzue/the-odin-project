@@ -4,39 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/style/styles.css">
     <title>Sign-up Form</title>
 </head>
 <body>
     <header id="main-header">
-        <h1 id="title-main">Sign-up Form</h1>
-        <p id="desc-title">A sign-up made for you to sign-up</p>
+        <h1 id="title-main">Join The Straw Hats Today!</h1>
+        <p id="desc-title">Lorem Ipsum Dolor Mita Seafe Sidem Etapp</p>
     </header>
     <div class="container">
-        <form>
+        <form class="form-main">
             <fieldset>
-                <legend>TOP Sign Up</legend>
-                     <label>First Name</label>
-                    <input type="text" required placeholder="John Doe">
+                <legend id="field-legend">Mugiwara no  Sign Up</legend>
 
-                    <label>Email Address</label>
-                    <input type="email" required placeholder="johndoe@doe.com"/>
-
-                    <label>Username</label>
-                    <input type="text" required placeholder="JDoe123"/>
-
-                    <label>Password</label>
-                    <input type="password" required/>
+                    <div class="form-group first">
+                        <label id="labels"><b>*First Name</b></label>
+                        <input id='name-field' type="text" required placeholder="John Doe">
+                    </div>
                     
-                    <label>Confirm Password</label>
-                    <input type="password" required/>
+                    <div class="form-group">
+                        <label id="labels"><b>*Email Address</b></label>
+                        <input id='email-field' type="email" required placeholder="johndoe@doe.com"/>
+                    </div>
 
-                    <label>Select Your Class:</label>
-                    <label><input type="radio" name="" id="">Warrior</label>
-                    <label><input type="radio" name="" id="">Archer</label>
-                    <label><input type="radio" name="" id="">Mage</label>
+                    <div class="form-group">
+                        <label id="labels"><b>*Username</b></label>
+                        <input id='username-field' type="text" required placeholder="JDoe123"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="labels"><b>*Password</b></label>
+                        <input id="pass-field" type="password" required/>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label id="labels"><b>*Confirm Password</b></label>
+                        <input id='confirm-pass-field' type="password" required/>
+                    </div>
+
+                    <div class='form-group'>
+
+                        <p><b>*Choose Your Class:</b></p>
+                        <label><input type='radio' name='recommend' class='input-radio' value='warrior'/>Warrior</label>
+                        <label><input type='radio' name='recommend' class='input-radio' value='mage'/>Mage</label>
+                        <label><input type='radio' name='recommend' class='input-radio' value='archer'/>Archer</label>
+                      
+                    </div>
+                    
+                    <div class="form-group last">
+                        <button class='b-main' type="submit">Create Character</button>
+                    </div>
             </fieldset>
-            <button type="submit">Create Character</button>
+            
         </form>
     </div>
 </body>
