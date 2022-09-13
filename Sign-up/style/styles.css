@@ -3,6 +3,7 @@
 * {
     margin:0;
     font-family: 'Poppins';
+    background: url(/assets/img/);
 }
 
 @font-face {
@@ -10,19 +11,26 @@
     src: url(../assets/fonts/op-font.ttf);
 }
 
+body {
+    background-color: black;
+    
+}
+
 #main-header {
+    padding-top:20px;
     text-align: center;
 }
 
 #title-main{
-    font-family: onePiece;
+    font-family: 'onePiece';
     font-size: 3rem;
+    color: white
 }
 
 #desc-title {
-    font-family: Poppins;
+    font-family: 'Poppins';
     font-size: 1.1rem;
-
+    color: white;
 }
 
 .form-main{ 
@@ -47,6 +55,16 @@ fieldset{
     padding-bottom: 15px;
     margin: auto;
     border-radius: 1px 1px;
+    
+}
+
+#roger1 {
+    z-index: 2;
+    max-width: 700px;
+    width: 50%;
+    position: fixed;
+    right:0px;
+    bottom: 0;
 }
 
 .form-group:nth-child(2){
@@ -81,6 +99,22 @@ label {
     width: 99%;
     border: none;
     border-radius: 4px 4px;
+}
+
+input[type="text"], textarea {
+
+    background-color : white; 
+  
+}
+input[type="password"], textarea {
+
+    background-color : white; 
+  
+}
+input[type="email"], textarea {
+
+    background-color :white; 
+  
 }
 
 .b-main {
