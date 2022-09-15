@@ -18,10 +18,6 @@ a:hover {
     font-weight: bold;
 }
 
-html { 
-    
-}
-
 body {
     background-color: rgb(218, 246, 255);
     margin: 0;
@@ -81,6 +77,25 @@ body {
     top: 4.5rem;
 }
 
+#right-side-buttons > button {
+    color: white;
+    border: 1px solid var(--back-blue);
+    border-radius: 4px 4px;
+    font-weight: bold;
+    background-color: var(--back-blue);
+    cursor: pointer;
+    /* text-transform: uppercase; */
+}
+
+#right-side-buttons > button:hover {
+    background-color: white;
+    color: var(--back-blue);
+    cursor: pointer;
+    transform: scale(1.1);
+    text-transform: uppercase;
+}
+
+
 #current-user{
     display: inline-block;
     
@@ -112,6 +127,10 @@ body {
     position: absolute;
     left: 50%;
     top:15%
+}
+
+#edu:hover {
+    cursor: pointer;
 }
 
 #edu > p {
@@ -158,7 +177,10 @@ body {
     margin-right: 10px;
 }
 
-
+.fa-bell:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 .sidebar {
     grid-area: a;
@@ -166,6 +188,17 @@ body {
     background-color: var(--back-blue);
     height: 100vh;
     color: white
+}
+
+#sidebar-final {
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    right: 106.5rem;
+}
+
+#ren-inc {
+    color: rgb(25, 0, 255)
 }
 
 .sidebar > h1 {
