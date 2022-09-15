@@ -1,12 +1,25 @@
 :root {
     --set-height: 100vh;
+    --back-blue: rgba(8, 130, 211, 0.89);;
 }
 
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-html { }
+a {
+    text-decoration: none;
+    color: white
+}
+
+a:hover {
+    color:rgb(34, 34, 34);
+    font-weight: bold;
+}
+
+html { 
+    
+}
 
 body {
     background-color: lightgrey;
@@ -42,9 +55,38 @@ body {
 .sidebar {
     grid-area: a;
     /* border: 1px solid green; */
-    background-color: rgba(8, 130, 211, 0.89);
+    background-color: var(--back-blue);
     height: 100vh;
     color: white
+}
+
+.sidebar > h1 {
+    margin-left: 25px;
+    margin-bottom: 75px;
+    font-size: 3rem;
+}
+
+.side-list-ul {
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.side-list-ul > li {
+    width: 100%;
+    position: relative;
+    padding-left:1em;
+}
+
+.side-list-ul > i {
+    position: absolute;
+    left: 25px;
+    margin-top: -13px;
+}
+
+.fa-home, .fa-user, .fa-comments, .fa-tasks, .fa-question-circle {
+    margin-right: 10px;
+    line-height: 55px;
 }
 
 .center-content { 
