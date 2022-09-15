@@ -50,25 +50,42 @@ body {
 .center-content { 
     grid-area: c;
     /* border: 1px solid yellow; */
+}
 
+.center-content > div {
+    display: grid;
+    grid-auto-flow: row;
 }
 
 .nested-center{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    grid-template-rows: 235px 235px 235px;
 }
 
 .nested-center p {
-    border:1px solid red;
     background-color: white;
     padding: 20px;
-    margin: 0;
+    margin: 0 auto;
     border-radius: 5px 5px;
+    border-radius: 5px 5px;
+    color:rgb(75, 75, 75);
+    text-align: center;
+    align-items: flex-end;
+}
+
+#title-section {
+    color: black !important;
 }
 
 .right-sidebar{
     grid-area: d;
+}
+
+.right-sidebar > div {
+    display: grid;
+    height: 339.1px;
 }
 
 .nested-right{
@@ -78,12 +95,12 @@ body {
 }
 
 .nested-right p {
-    border:1px solid green;
     background-color: white;
     padding: 20px;
-    margin-right: 10px;
+    margin-right: 14px;
     margin-top: 0px;
     border-radius: 5px 5px;
+    color:rgb(75, 75, 75);
 }
 
 .nested-right-bottom {
@@ -93,16 +110,23 @@ body {
 }
 
 .nested-right-bottom p {
-    border:1px solid green;
     background-color: white;
     padding: 12px;
     margin-right: 10px;
     margin-top: 0px;
     border-radius: 5px 5px;
+    border-radius: 5px 5px;
+    color:rgb(75, 75, 75)
 }
 
 .project-title, .announce-title, .trending-title {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+
+.fa-share {
+    position: relative;
+    bottom: 0;
+    right: 0;
 }
