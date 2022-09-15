@@ -18,13 +18,38 @@
                 <i class="fa fa-user" aria-hidden="true"></i><li><a href='#' id="links-sidebar-left">Profile</a></li><br>
                 <i class="fa fa-comments" aria-hidden="true"></i><li><a href='#' id="links-sidebar-left">Messages</a></li><br>
                 <i class="fa fa-tasks" aria-hidden="true"></i><li><a href='#' id="links-sidebar-left">Tasks</a></li><br>
-                <i class="fa fa-question-circle" aria-hidden="true"></i><li><a href='#' id="links-sidebar-left">Get Help</a></li>
+                <i class="fa fa-question-circle" aria-hidden="true"></i><li><a href='#' id="links-sidebar-left">Help</a></li>
             </ul>
         </div>
 
         <div class="header">
-            <input type="text"/>
-            <p>Username logged test meeeh</p>
+            <div id="search-bar">
+                <i class="fa fa-search" aria-hidden="true"></i><input type="text" placeholder="search for a project..."
+                id='search-box'/>
+            </div>
+
+            <div id="current-user">
+                <img src='assets/img/hot-face.svg' class='svg-fam' alt=""/>
+                <div id="org">
+                    <p id="top-log-user">Hello there,</p><br>
+                    <p id="log-user">Renan Araújo</p>
+                </div>
+            </div>
+
+            <div id="edu">
+                <p>R. Admin<br>Dashboard</p>
+                <img src="assets/img/edu.svg" class="svg-edu" alt=""/>
+            </div>
+
+            <div id="currently-logged-as">
+                <p><i class="fa fa-bell" aria-hidden="true"></i>Logged as <em><b>Ren Inc.</b></em></p>
+            </div>
+
+            <div id="right-side-buttons">
+                <button>New</button>
+                <button>Import</button>
+                <button>Log Out</button>
+            </div>
         </div>
 
         <div class="center-content"><p class='project-title'>Your Projects</p>
