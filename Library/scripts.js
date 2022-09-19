@@ -7,64 +7,68 @@ var br = document.createElement("br");
 function GFG_Fun() {              
     // Create a form dynamically
     var form = document.createElement("form");
-    form.setAttribute("method", "post");
-    form.setAttribute("action", "https://google.com");
+    // form.setAttribute("method", "post");
+    // form.setAttribute("action", "url here");
  
     // Create an input element for the title
-    var FN = document.createElement("input");
-    FN.setAttribute("type", "text");
-    FN.setAttribute("name", "title");
-    FN.setAttribute("placeholder", "Title");
+    var title = document.createElement("input");
+    title.setAttribute("type", "text");
+    title.setAttribute("name", "title");
+    title.setAttribute("placeholder", "Title");
  
     // Create an input element for the author
-    var DOB = document.createElement("input");
-    DOB.setAttribute("type", "text");
-    DOB.setAttribute("name", "author");
-    DOB.setAttribute("placeholder", "Author");
+    var author = document.createElement("input");
+    author.setAttribute("type", "text");
+    author.setAttribute("name", "author");
+    author.setAttribute("placeholder", "Author");
  
     // Create an input element for the pages
-    var EID = document.createElement("input");
-    EID.setAttribute("type", "text");
-    EID.setAttribute("name", "pages");
-    EID.setAttribute("placeholder", "Pages");
+    var pages = document.createElement("input");
+    pages.setAttribute("type", "text");
+    pages.setAttribute("name", "pages");
+    pages.setAttribute("placeholder", "Pages");
  
-    // create a submit button
-    var s = document.createElement("input");
-    s.setAttribute("type", "submit");
-    s.setAttribute("value", "Submit");
+    // create a add book button
+    var addBook = document.createElement("input");
+    addBook.setAttribute("type", "submit");
+    addBook.setAttribute("value", "Add Book");
 
     //create a ´have you read it´ check
     var readIt = document.createElement('input');
     readIt.setAttribute('type', 'checkbox');
-    readIt.setAttribute('value', 'Have You Read It?')
+    readIt.setAttribute('value', 'readit')
 
-    // Append the full name input to the form
-    form.appendChild(FN);
+    //create a label for the checkbox
+    var readItLabel = document.createElement('label');
+    readItLabel.innerHTML = 'Have You Read It?  ';
+
+    // Append the title input to the form
+    form.appendChild(title);
                  
     // Inserting a line break
     form.appendChild(br.cloneNode());
                  
-    // Append the DOB to the form
-    form.appendChild(DOB);
+    // Append the author to the form
+    form.appendChild(author);
     form.appendChild(br.cloneNode());
                  
-    // Append the emailID to the form
-    form.appendChild(EID);
+    // Append the pages to the form
+    form.appendChild(pages);
     form.appendChild(br.cloneNode());
+
+    // Append the checkbox label to form
+    form.appendChild(readItLabel);
+    //form.appendChild(br.cloneNode());
 
     // Append the ´have you read it´ to the form
     form.appendChild(readIt);
     form.appendChild(br.cloneNode());
                  
     // Append the submit button to the form
-    form.appendChild(s);
+    form.appendChild(addBook);
  
     document.getElementsByTagName("body")[0].appendChild(form);
 
     clickHereButton.hidden = true;
     
-}
-
-if(s) {
-    s.hidden = true;
 }
