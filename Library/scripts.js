@@ -11,9 +11,10 @@ addBookButton.addEventListener('click', function(){
 
 
 class Book {
-    constructor(title,author,category) {
+    constructor(title,author,pages,category) {
         this.title = title;
         this.author = author;
+        this.pages = pages
         this.category = category;
     }
 }
@@ -28,6 +29,7 @@ function addElement(book) {
     // Convert these elements to p, in order to hold your book info.    
     let elementTitle = document.createElement('p');
     let elementAuthor = document.createElement('p');
+    let elementPages = document.createElement('p');
     let elementCategory = document.createElement('p');
     
     // The list element that will hold all book info.
@@ -35,15 +37,18 @@ function addElement(book) {
 
     let titleContent = document.createTextNode("Title: " + book.title);
     let authorContent = document.createTextNode("Author: " + book.author);
+    let pagesContent = document.createTextNode("Pages: " + book.pages);
     let categoryContent = document.createTextNode("Category: " + book.category);
 
     elementTitle.appendChild(titleContent);
     elementAuthor.appendChild(authorContent);
+    elementPages.appendChild(pagesContent);
     elementCategory.appendChild(categoryContent);
     
     // Add all book info to list element.
     bookElement.appendChild(elementTitle);
     bookElement.appendChild(elementAuthor);
+    bookElement.appendChild(elementPages);
     bookElement.appendChild(elementCategory);
     
     // Add list element to list.
@@ -56,12 +61,14 @@ function submitBook(event) {
     //GET INPUT NAMES TO CLEAN VALUE AFTER INPUT
     let titleInput = document.querySelector('#title');
     let authorInput = document.querySelector('#author');
+    let pagesInput = document.querySelector('#pages');
     
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
+    let pages = document.getElementById('pages').value;
     let category = document.getElementById('category').value;
 
-    let book = new Book(title,author,category);
+    let book = new Book(title,author,pages,category);
 
     books.push(book);     
 
@@ -74,6 +81,7 @@ function submitBook(event) {
     //CLEAR INPUT FIELDS AFTER INPUT
     titleInput.value = "";
     authorInput.value = "";
+    pagesInput.value = "";
 
 }
 

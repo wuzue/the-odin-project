@@ -6,34 +6,38 @@
         <link rel="stylesheet" href="assets/style/styles.css">
         <title>Library</title>
     </head>
-    <body style="text-align: center;">
-        <h1 style="color: green;">
-            Library
-        </h1>
+    <body>
+        <div id="main-container">
+            <h1>
+                Library
+            </h1>
 
-        <div id="add-book-button">
-            <br>
-            <button id="add-book">Add New Book</button>
-        </div>
-        <br>
-        <form id='add-book-form' action="">
-            <div id="form-div">
-                <label for="title"></label>
-                    <input type="text" name="title" id="title" placeholder="Book Title">
-                <label for="author"></label>
-                    <input type="text" name="author" id="author" placeholder="Author">
-                <label for="category">Genre</lgitabel>
-                <select name="category" id="category">
-                    <option value="fantasy">Fantasy</option>
-                    <option value="sci-fi">Sci-Fi</option>
-                    <option value="romans">Romans</option>
-                </select>
-                <button type="submit" id="submit">Submit</button>
+            <div id="add-book-button">
+                <br>
+                <button id="add-book">Add New Book</button>
             </div>
-        </form>
+            <br>
+            <form id='add-book-form' action="">
+                <div id="form-div">
+                    <label for="title"></label>
+                        <input type="text" name="title" id="title" placeholder="Book Title">
+                    <label for="author"></label>
+                        <input type="text" name="author" id="author" placeholder="Author">
+                    <label for="category">Genre</label>
+                    <label for="pages"></label>
+                        <input type="number" name="pages" id="pages" placeholder="N of pages">
+                    <select name="category" id="category">
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="romans">Romans</option>
+                    </select>
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+            </form>
 
-        <div div="library">
-            <ul id="book-list"></ul>
+            <div id="library">
+                <ul id="book-list"></ul>
+            </div>
         </div>
         <script src="scripts.js"></script>  
     </body>
