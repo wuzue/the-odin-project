@@ -52,6 +52,10 @@ function addElement(book) {
 
 function submitBook(event) {
     event.preventDefault();
+
+    //GET INPUT NAMES TO CLEAN VALUE AFTER INPUT
+    let titleInput = document.querySelector('#title');
+    let authorInput = document.querySelector('#author');
     
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
@@ -67,6 +71,10 @@ function submitBook(event) {
 
     addBookButton.hidden = false;
 
+    //CLEAR INPUT FIELDS AFTER INPUT
+    titleInput.value = "";
+    authorInput.value = "";
+
 }
 
 /*btn.addEventListener('click', function(){
@@ -75,3 +83,7 @@ function submitBook(event) {
 });*/
 
 btn.addEventListener('click', submitBook);
+
+//btn.addEventListener('click', function(){
+//    submitBook();
+//});
