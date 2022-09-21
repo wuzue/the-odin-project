@@ -10,13 +10,20 @@
         <h1 style="color: green;">
             Library
         </h1>
-        <p>
-          app to add books that works like a bookshelf
-        </p>
-        <button onClick="GFG_Fun()" id="click-here-button">
-            Add New Book
-        </button>
-        <p id="GFG_DOWN"></p>
+        
+        <form action="">
+            <label for="title"></label>
+            <input type="text" name="title" id="title">
+            <label for="author"></label>
+            <input type="text" name="author" id="author">
+            <label for="category"></label>
+            <select name="category" id="category">
+                <option value="fantasy">Fantasy</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="romans">Romans</option>
+            </select>
+            <button type="submit" id="submit">Submit</button>
+        </form>
     
         <script src="scripts.js"></script>  
     </body>
