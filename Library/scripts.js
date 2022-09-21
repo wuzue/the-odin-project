@@ -1,3 +1,15 @@
+var addBookForm = document.querySelector('#add-book-form');
+var addBookButton = document.querySelector('#add-book-button');
+
+addBookForm.hidden = true;
+
+addBookButton.addEventListener('click', function(){
+    addBookForm.hidden = false;
+    addBookButton.hidden = true;
+})
+
+// BUTTON TO DISPLAY A FORM TO ADD A NEW BOOK
+
 class Book {
     constructor(title,author,category) {
         this.title = title;
@@ -50,7 +62,16 @@ function submitBook(event) {
     books.push(book);     
 
     addElement(book);
+
+    addBookButton.hidden = false;
+
+    addBookForm.hidden = true;
       
 }
 
-btn.addEventListener('click',submitBook);
+/*btn.addEventListener('click', function(){
+    submitBook();
+    addBookForm.hidden = true;
+});*/
+
+btn.addEventListener('click', submitBook);
