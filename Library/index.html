@@ -17,21 +17,24 @@
         </div>
         <br>
         <form id='add-book-form' action="">
-            <label for="title"></label>
-            <input type="text" name="title" id="title" placeholder="Book Title">
-            <label for="author"></label>
-            <input type="text" name="author" id="author" placeholder="Author">
-            <label for="category">Genre</label>
-            <select name="category" id="category">
-                <option value="fantasy">Fantasy</option>
-                <option value="sci-fi">Sci-Fi</option>
-                <option value="romans">Romans</option>
-            </select>
-            <button type="submit" id="submit">Submit Boook</button>
+            <div id="form-div">
+                <label for="title"></label>
+                    <input type="text" name="title" id="title" placeholder="Book Title">
+                <label for="author"></label>
+                    <input type="text" name="author" id="author" placeholder="Author">
+                <label for="category">Genre</lgitabel>
+                <select name="category" id="category">
+                    <option value="fantasy">Fantasy</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="romans">Romans</option>
+                </select>
+                <button type="submit" id="submit">Submit</button>
+            </div>
         </form>
 
-        <ul id="book-list"></ul>
-    
+        <div div="library">
+            <ul id="book-list"></ul>
+        </div>
         <script src="scripts.js"></script>  
     </body>
 </html>
