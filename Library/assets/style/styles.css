@@ -46,3 +46,16 @@ p {
     font-size: 1.5rem;
     text-align: center;
 }
+
+#delete-icon {
+    background-color: #ceb92c;
+    color: #2a2a2a;
+    cursor: pointer;
+}
+
+#delete-icon:hover {
+    background-color: ghostwhite;
+    color: #2a2a2a;
+    transform: scale(1.1);
+    border-radius: 4px 4px;
+}

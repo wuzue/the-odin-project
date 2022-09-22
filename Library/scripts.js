@@ -2,6 +2,11 @@ var addBookForm = document.querySelector('#add-book-form');
 var addBookButton = document.querySelector('#add-book');
 var formDiv = document.querySelector("#form-div");
 
+var testDel = document.querySelector('#test-del');
+testDel.hidden = true;
+
+//document.getElementById('add-book-form').style.position = 'relative';
+
 formDiv.hidden = true;
 // BUTTON TO DISPLAY A FORM TO ADD A NEW BOOK
 addBookButton.addEventListener('click', function(){
@@ -25,6 +30,9 @@ let elementUl = document.getElementById('book-list');
 
 let books = [];
 
+//CRIANDO FEATURE PARA DELETAR LIVRO EM ESCOPO GLOBAL
+//!!! DELETE TA AQUI !!!
+
 function addElement(book) {
     
     // Convert these elements to p, in order to hold your book info.    
@@ -34,20 +42,25 @@ function addElement(book) {
     let elementCategory = document.createElement('p');
     let elementDelBook = document.createElement('p');
     
+    
     // The list element that will hold all book info.
     let bookElement = document.createElement('li');
+    bookElement.setAttribute('class', 'li-books')
 
     let titleContent = document.createTextNode("Title: " + book.title);
     let authorContent = document.createTextNode("Author: " + book.author);
     let pagesContent = document.createTextNode("Pages: " + book.pages);
     let categoryContent = document.createTextNode("Genre: " + book.category);
-    let delBookContent = document.createTextNode('\u{1f5d1}');
-
+    //let delBookContent = document.createTextNode('\u{1f5d1}');
+    let delBookContent = document.createTextNode("delete book");   
+    
+    elementDelBook.setAttribute('id', 'delete-icon');
+    
     elementTitle.appendChild(titleContent);
     elementAuthor.appendChild(authorContent);
     elementPages.appendChild(pagesContent);
     elementCategory.appendChild(categoryContent);
-    elementDelBook.appendChild(delBookContent);
+    elementDelBook.appendChild(delBookContent);   
     
     // Add all book info to list element.
     bookElement.appendChild(elementTitle);
@@ -56,10 +69,30 @@ function addElement(book) {
     bookElement.appendChild(elementCategory);
     bookElement.appendChild(elementDelBook);
     
+    
+    
+
     // Add list element to list.
     elementUl.appendChild(bookElement);
-}
 
+
+    console.log(bookElement);
+    
+    //CODIGO ABAIXO TÁ O AÇO!!! TA FUNCIONANDO PRA REMOVER O LIVRO CLICADO
+    const getLi = document.getElementById('delete-icon');
+    elementDelBook.addEventListener('click', function(dBook){
+        //console.log('clicked');//debugging purpose, see if the click is ok :p
+        bookElement.remove();
+    }) 
+
+    //DESSE JEITO FUNCIONA, CONSIGO REMOVER OS LIVROS QUE CLICAR
+    //MAS A AREA DE CLIQUE TA PEGANDO TODO O ELEMENTO 'LI'
+    /*const getLi = document.getElementById('delete-icon');
+    bookElement.addEventListener('click', function(dBook){
+        dBook.target.remove();
+    })*/ 
+    
+}
 function submitBook(event) {
     event.preventDefault();
 
@@ -90,13 +123,4 @@ function submitBook(event) {
 
 }
 
-/*btn.addEventListener('click', function(){
-    submitBook();
-    addBookForm.hidden = true;
-});*/
-
 btn.addEventListener('click', submitBook);
-
-//btn.addEventListener('click', function(){
-//    submitBook();
-//});
