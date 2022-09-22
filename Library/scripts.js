@@ -11,11 +11,12 @@ addBookButton.addEventListener('click', function(){
 
 
 class Book {
-    constructor(title,author,pages,category) {
+    constructor(title,author,pages,category, delBook) {
         this.title = title;
         this.author = author;
         this.pages = pages
         this.category = category;
+        this.delBook = delBook;
     }
 }
 
@@ -31,6 +32,7 @@ function addElement(book) {
     let elementAuthor = document.createElement('p');
     let elementPages = document.createElement('p');
     let elementCategory = document.createElement('p');
+    let elementDelBook = document.createElement('p');
     
     // The list element that will hold all book info.
     let bookElement = document.createElement('li');
@@ -39,17 +41,20 @@ function addElement(book) {
     let authorContent = document.createTextNode("Author: " + book.author);
     let pagesContent = document.createTextNode("Pages: " + book.pages);
     let categoryContent = document.createTextNode("Genre: " + book.category);
+    let delBookContent = document.createTextNode('\u{1f5d1}');
 
     elementTitle.appendChild(titleContent);
     elementAuthor.appendChild(authorContent);
     elementPages.appendChild(pagesContent);
     elementCategory.appendChild(categoryContent);
+    elementDelBook.appendChild(delBookContent);
     
     // Add all book info to list element.
     bookElement.appendChild(elementTitle);
     bookElement.appendChild(elementAuthor);
     bookElement.appendChild(elementPages);
     bookElement.appendChild(elementCategory);
+    bookElement.appendChild(elementDelBook);
     
     // Add list element to list.
     elementUl.appendChild(bookElement);
