@@ -38,7 +38,7 @@ function addElement(book) {
     let titleContent = document.createTextNode("Title: " + book.title);
     let authorContent = document.createTextNode("Author: " + book.author);
     let pagesContent = document.createTextNode("Pages: " + book.pages);
-    let categoryContent = document.createTextNode("Category: " + book.category);
+    let categoryContent = document.createTextNode("Genre: " + book.category);
 
     elementTitle.appendChild(titleContent);
     elementAuthor.appendChild(authorContent);
