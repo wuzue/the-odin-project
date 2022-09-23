@@ -16,11 +16,12 @@ addBookButton.addEventListener('click', function(){
 
 
 class Book {
-    constructor(title,author,pages,category, delBook) {
+    constructor(title,author,pages,category,readit,delBook) {
         this.title = title;
         this.author = author;
         this.pages = pages
         this.category = category;
+        this.readit = readit;
         this.delBook = delBook;
     }
 }
@@ -40,6 +41,7 @@ function addElement(book) {
     let elementAuthor = document.createElement('p');
     let elementPages = document.createElement('p');
     let elementCategory = document.createElement('p');
+    let elementReadit = document.createElement('p');
     let elementDelBook = document.createElement('p');
     
     
@@ -51,6 +53,8 @@ function addElement(book) {
     let authorContent = document.createTextNode("Author: " + book.author);
     let pagesContent = document.createTextNode("Pages: " + book.pages);
     let categoryContent = document.createTextNode("Genre: " + book.category);
+    let readitContent = document.createTextNode("Read? " + book.readit);
+    //READIT TEXT NODE ! IF NEEDED
     //let delBookContent = document.createTextNode('\u{1f5d1}');
     let delBookContent = document.createTextNode("delete book");   
     
@@ -61,12 +65,14 @@ function addElement(book) {
     elementPages.appendChild(pagesContent);
     elementCategory.appendChild(categoryContent);
     elementDelBook.appendChild(delBookContent);   
-    
+    elementReadit.appendChild(readitContent);
+
     // Add all book info to list element.
     bookElement.appendChild(elementTitle);
     bookElement.appendChild(elementAuthor);
     bookElement.appendChild(elementPages);
     bookElement.appendChild(elementCategory);
+    bookElement.appendChild(elementReadit);
     bookElement.appendChild(elementDelBook);
     
     
@@ -77,6 +83,7 @@ function addElement(book) {
 
 
     console.log(bookElement);
+    console.log(readit);
     
     //CODIGO ABAIXO TÁ O AÇO!!! TA FUNCIONANDO PRA REMOVER O LIVRO CLICADO
     const getLi = document.getElementById('delete-icon');
@@ -105,8 +112,15 @@ function submitBook(event) {
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
     let category = document.getElementById('category').value;
+    let readit = document.getElementById('readit').checked;
 
-    let book = new Book(title,author,pages,category);
+    if(readit == false){
+        readit = 'Not Yet';
+    } else {
+        readit = 'Yes!'
+    }
+
+    let book = new Book(title,author,pages,category,readit);
 
     books.push(book);     
 
