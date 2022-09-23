@@ -107,6 +107,7 @@ function submitBook(event) {
     let titleInput = document.querySelector('#title');
     let authorInput = document.querySelector('#author');
     let pagesInput = document.querySelector('#pages');
+    let checkInput = document.querySelector('#readit');
     
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
@@ -134,7 +135,7 @@ function submitBook(event) {
     titleInput.value = "";
     authorInput.value = "";
     pagesInput.value = "";
-
+    checkInput.checked = false;
 }
 
 btn.addEventListener('click', submitBook);
