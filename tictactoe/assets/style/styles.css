@@ -1,0 +1,27 @@
+:root {
+    --colunas: 1;
+    --linhas: 1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board-div{
+    display: grid;
+    margin-top: 150px;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+}
+
+.square-item {
+    padding: 1em;
+    border: 1px solid black;
+    text-align: center;
+}
