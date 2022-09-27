@@ -14,48 +14,33 @@ drawBoard(3,3);
 
 square = document.getElementsByClassName('square-item')
 
-let playerOne = 'x';
-let playerTwo = 'o';
+let playerOne = 'X';
+let playerTwo = 'O';
 let turn = 0;
 let lastClicked;
 
-/*for(let i = 0; i < square.length; i++){ THIS THING HERE IS WORKING, ITS
-    square[i].addEventListener('click', function(){ GETTING THE CLICK IN EACH SQUARE
-        this.classList.toggle(console.log('click @ ' + i + drawX)); IN THE BOX
-    })
-}*/
-
-
+    
+// TODO : ADICIONAR COR DIFERENTE PARA CADA JOGADA.
+// E.G. : X = BLUE, O = YELLOW
 function clickGameBox(e){
+    var keys = square.innerHTML;
     if (turn === 0){
         e.target.innerText = playerOne;
+        e.target.style.color = 'blue';
         lastClicked = playerOne;
-    }else if(e.target.innerHTML != ""){
+    }else if(e.target.innerHTML != ""){//skip if square aint empty
         return;
     }else{
         if(lastClicked === playerOne){
             e.target.innerText = playerTwo;
+            e.target.style.color = 'red';
             lastClicked = playerTwo;
         } else {
+            //document.querySelector('.square-item').style.color = "red";
             e.target.innerText = playerOne;
+            e.target.style.color = 'blue';
             lastClicked = playerOne;
         }
     }
     turn = turn + 1;
 }
-
-/*
-function clickGameBox(){
-    var whosTurn = true;
-    function turn(id){
-        var element = square;
-        if(whosTurn){
-            element.innerHTML = 'X';
-        } else {
-            element.innerHTML = 'O';
-        }
-        element.disabled = true;
-        whosTurn = !whosTurn;
-    }turn();
-}
-*/
