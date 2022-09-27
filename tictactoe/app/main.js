@@ -27,6 +27,9 @@ function clickGameBox(e){
     if (turn === 0){
         e.target.innerText = playerOne;
         e.target.style.color = 'blue';
+        e.target.style.fontSize = '3rem'
+        e.target.style.fontFamily = 'sans-serif'
+        e.target.style.fontWeight = 'bold';
         lastClicked = playerOne;
     }else if(e.target.innerHTML != ""){//skip if square aint empty
         return;
@@ -34,11 +37,17 @@ function clickGameBox(e){
         if(lastClicked === playerOne){
             e.target.innerText = playerTwo;
             e.target.style.color = 'red';
+            e.target.style.fontSize = '3rem'
+            e.target.style.fontFamily = 'sans-serif'
+            e.target.style.fontWeight = 'bold';
             lastClicked = playerTwo;
         } else {
             //document.querySelector('.square-item').style.color = "red";
             e.target.innerText = playerOne;
             e.target.style.color = 'blue';
+            e.target.style.fontSize = "3rem"
+            e.target.style.fontFamily = 'sans-serif'
+            e.target.style.fontWeight = 'bold';
             lastClicked = playerOne;
         }
     }
