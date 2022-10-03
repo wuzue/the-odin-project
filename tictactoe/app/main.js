@@ -1,55 +1,80 @@
-var drawBoard = (rows, cols) => {
-    box = document.querySelector("#board-div");
-    box.style.setProperty('--linhas', rows);
-    box.style.setProperty('--colunas', cols);
-    for(let i = 0; i < (rows * cols); i++){
-        gameBoard = document.createElement('div');
-        //gameBoard.setAttribute('id', 'game-board');
-        box.appendChild(gameBoard).className = 'square-item';
-        box.addEventListener('click',  clickGameBox);
-    };
-};
+const cells = document.querySelectorAll(".cell");
+const whoTurn = document.querySelector("#who-turn");
+//const restartBtn = document.querySelector("#restartBtn");
+const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+];
+let options = ["", "", "", "", "", "", "", "", ""];
+let currentPlayer = "X";
+let running = false;
 
-drawBoard(3,3);
+initializeGame();
 
-square = document.getElementsByClassName('square-item')
+function initializeGame(){
+    cells.forEach(cell => cell.addEventListener("click", cellClicked));
+    //restartBtn.addEventListener("click", restartGame);
+    whoTurn.textContent = `${currentPlayer}'s turn`;
+    running = true;
+}
+function cellClicked(){
+    const cellIndex = this.getAttribute("cellIndex");
 
-let playerOne = 'X';
-let playerTwo = 'O';
-let turn = 0;
-let lastClicked;
-
-    
-// TODO : ADICIONAR COR DIFERENTE PARA CADA JOGADA.
-// E.G. : X = BLUE, O = YELLOW
-function clickGameBox(e){
-    var keys = square.innerHTML;
-    if (turn === 0){
-        e.target.innerText = playerOne;
-        e.target.style.color = 'blue';
-        e.target.style.fontSize = '3rem'
-        e.target.style.fontFamily = 'sans-serif'
-        e.target.style.fontWeight = 'bold';
-        lastClicked = playerOne;
-    }else if(e.target.innerHTML != ""){//skip if square aint empty
+    if(options[cellIndex] != "" || !running){
         return;
-    }else{
-        if(lastClicked === playerOne){
-            e.target.innerText = playerTwo;
-            e.target.style.color = 'red';
-            e.target.style.fontSize = '3rem'
-            e.target.style.fontFamily = 'sans-serif'
-            e.target.style.fontWeight = 'bold';
-            lastClicked = playerTwo;
-        } else {
-            //document.querySelector('.square-item').style.color = "red";
-            e.target.innerText = playerOne;
-            e.target.style.color = 'blue';
-            e.target.style.fontSize = "3rem"
-            e.target.style.fontFamily = 'sans-serif'
-            e.target.style.fontWeight = 'bold';
-            lastClicked = playerOne;
+    }
+
+    updateCell(this, cellIndex);
+    checkWinner();
+}
+function updateCell(cell, index){
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+}
+function changePlayer(){
+    currentPlayer = (currentPlayer == "X") ? "O" : "X";
+    whoTurn.textContent = `${currentPlayer}'s turn`;
+}
+function checkWinner(){
+    let roundWon = false;
+
+    for(let i = 0; i < winConditions.length; i++){
+        const condition = winConditions[i];
+        const cellA = options[condition[0]];
+        const cellB = options[condition[1]];
+        const cellC = options[condition[2]];
+
+        if(cellA == "" || cellB == "" || cellC == ""){
+            continue;
+        }
+        if(cellA == cellB && cellB == cellC){
+            roundWon = true;
+            break;
         }
     }
-    turn = turn + 1;
+
+    if(roundWon){
+        whoTurn.textContent = `${currentPlayer} wins!`;
+        running = false;
+    }
+    else if(!options.includes("")){
+        whoTurn.textContent = `Draw!`;
+        running = false;
+    }
+    else{
+        changePlayer();
+    }
+}
+function restartGame(){
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    whoTurn.textContent = `${currentPlayer}'s turn`;
+    cells.forEach(cell => cell.textContent = "");
+    running = true;
 }
