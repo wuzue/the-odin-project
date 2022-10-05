@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(["Ren","Ner","nRn"]),console.log("ok")})();
