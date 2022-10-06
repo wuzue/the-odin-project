@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(255, 205, 205);
+}
+
+a { 
+    text-decoration: none;
+    color: black;
+}
+
+#top-nav {
+    text-align: center;
+}
+
+#menu-items{
+    padding: 2em;
+    font-size: 2rem;
+    font-family: tahoma;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: -25px;
+}
+
+#footer-items {
+    display: inline-block;
+    padding-right: 2rem;
+}
