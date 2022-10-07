@@ -1,6 +1,6 @@
 import { container } from './core-structure';
 import './core-structure';
-import { pepperoniPizza, calabresaPizza } from './files';
+import { pepperoniPizza, calabresaPizza, portuguesaPizza } from './files';
 
 //CREATE MENU CONTENT AND APPEND IT TO INDEX.JS
 export function makeMenu(){
@@ -63,4 +63,28 @@ export function makeMenu(){
     calabresaImg.src = calabresaPizza;
     calabresaImg.setAttribute('id', 'calabresa-img');
     calabresa.appendChild(calabresaImg);
+
+    //PORTUGUESA PIZZA
+    let portuguesa = document.createElement('div');
+    portuguesa.setAttribute('id', 'portuguesa');
+    dishes.appendChild(portuguesa);
+
+    let portuguesaTitle = document.createElement('p');
+    portuguesaTitle.setAttribute('id', 'portuguesa-title');
+    portuguesaTitle.textContent = 'Portuguesa Pizza';
+    portuguesa.appendChild(portuguesaTitle);
+
+    let portuguesaDesc = document.createElement('p');
+    portuguesaDesc.setAttribute('id', 'portuguesa-desc');
+    portuguesaDesc.textContent = `Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Vero fugiat repellat placeat tempora 
+    ducimus, saepe unde odio ullam quidem quasi 
+    consectetur, soluta vitae assumenda? Qui tempora
+    nemo numquam doloremque molestias!`;
+    portuguesa.appendChild(portuguesaDesc);
+
+    let portuguesaImg = document.createElement('img');
+    portuguesaImg.src = portuguesaPizza;
+    portuguesaImg.setAttribute('id', 'portuguesa-img');
+    portuguesa.appendChild(portuguesaImg);
 }
