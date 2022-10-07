@@ -12,9 +12,15 @@ a {
 }
 
 #menu-items{
-    padding: 2em;
+    padding-right: 3em;
+    padding-left: 3rem;
     font-size: 2rem;
     font-family: tahoma;
+}
+
+#menu-items:hover{
+    color: white;
+    text-shadow:1px 1px black;
 }
 
 footer {
@@ -28,4 +34,8 @@ footer {
 #footer-items {
     display: inline-block;
     padding-right: 2rem;
+}
+
+#pepperoni-img {
+    width: 300px;
 }
