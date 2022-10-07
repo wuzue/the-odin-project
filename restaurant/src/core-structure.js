@@ -1,5 +1,8 @@
 export let container;
 
+export let menuItemOne;
+export let menuItemTwo;
+
 // CREATE FOOTER
 export function topNav(){
     // CREATE MAIN DIV ELEMENT
@@ -14,15 +17,13 @@ export function topNav(){
     container.appendChild(topNav);
 
     //CREATE MENU ITEMS
-    let menuItemOne = document.createElement('a');
+    menuItemOne = document.createElement('a');
     menuItemOne.setAttribute('href', '#')
     menuItemOne.setAttribute('id', 'menu-items');
     menuItemOne.textContent = 'Home';
     topNav.appendChild(menuItemOne);
 
-    
-
-    let menuItemTwo = document.createElement('a');
+    menuItemTwo = document.createElement('a');
     menuItemTwo.setAttribute('href', '#');
     menuItemTwo.setAttribute('id', 'menu-items');
     menuItemTwo.textContent = "Menu";
@@ -33,6 +34,8 @@ export function topNav(){
     menuItemThree.setAttribute('id', 'menu-items');
     menuItemThree.textContent = 'Contact';
     topNav.appendChild(menuItemThree);
+
+    
 };
 
 export function footer(){
@@ -60,5 +63,7 @@ export function footer(){
     footer.appendChild(footerItemThree);
 
 };
+
+
 
 // export function setupCoreStructure();

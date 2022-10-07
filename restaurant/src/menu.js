@@ -2,11 +2,14 @@ import { container } from './core-structure';
 import './core-structure';
 import { pepperoniPizza, calabresaPizza, portuguesaPizza } from './files';
 
+export let menuid;
+
 //CREATE MENU CONTENT AND APPEND IT TO INDEX.JS
 export function makeMenu(){
     let menu = document.createElement('div');
     menu.setAttribute('id', 'menu');
     container.appendChild(menu);
+    menuid = document.getElementById('menu');
 
     let descMenu = document.createElement('p');
     descMenu.setAttribute('id', 'desc-menu');

@@ -3,6 +3,8 @@ import './core-structure';
 import { homeLogo } from './files';
 //import { compilation } from 'webpack';
 
+export let homeid;
+
 //CREATE HOME CONTENT AND EXPORT IT TO BE LOADED FROM INDEX JS
 export function makeHome(def){
     
@@ -10,6 +12,7 @@ export function makeHome(def){
     let home = document.createElement('div');
     home.setAttribute('id', 'home')
     container.appendChild(home);
+    homeid = document.getElementById('home');
 
     //IF WHEN WE CALL IT AT INDEX.JS WE PASS 'hidden' AS ARG, IT HIDDENS, ELSE DOESNT
     if(def == 'hidden'){
