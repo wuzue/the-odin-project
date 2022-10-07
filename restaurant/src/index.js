@@ -26,12 +26,12 @@ footer();
 makeHome();//NO ARGS = HOME VISIBLE *|* 'hidden' AS ARGS = HOME HIDDEN
 makeMenu();
 
-//HIDE AND SHOW EITHER HOME OR MENU LOGIN
+//HIDE AND SHOW EITHER HOME OR MENU LOGIC
 let gHome, gMenu;
 gHome = menuItemOne;
 gMenu = menuItemTwo;
 
-menuid.hidden = true;
+menuid.hidden = true;//HIDDEN BY DEFAULT, SO MENU ALWAYS SHOWS UP AT FIRST.
 
 gHome.addEventListener('click', () => {
     homeid.hidden = false;

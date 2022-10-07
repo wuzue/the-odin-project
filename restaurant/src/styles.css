@@ -1,10 +1,13 @@
 body {
-    background-color: rgb(255, 205, 205);
+    background-color: rgb(255, 230, 230);
 }
 
-a { 
+a {
     text-decoration: none;
     color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    padding: 2em;
 }
 
 #top-nav {
@@ -24,16 +27,99 @@ a {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: -25px;
+    text-align: center;
+    background-color: rgb(240, 197, 140);
 }
 
 #footer-items {
     display: inline-block;
     padding-right: 2rem;
+}
+
+#home{
+    text-align: center;
+    font-family: Tahoma;
+}
+
+#home-title{
+    margin-top: 30px;
+    letter-spacing: 3px;
+    font-size: 3rem;
+}
+
+#desc-title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#home-text{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+#logo1{
+    width: 300px;
+}
+
+#below-logo{
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#get-in-touch{
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 3px rgb(230, 174, 174);
+    padding-top: 20px;
+}
+
+#contact-home-page{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#contact-home {
+    padding-right: 1.5rem;
+    font-weight: bold;
+}
+
+/* END OF HOME STYLE */
+
+#menu{
+    text-align: center;
+    font-family: Tahoma;
+}
+
+#desc-menu{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#pepperoni-title, #calabresa-title, #portuguesa-title{
+    font-size: 2rem;
+    margin-bottom: -5px;
+}
+
+#pepperoni-desc, #portuguesa-desc, #calabresa-desc{
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#portuguesa-img, #calabresa-img, #pepperoni-img{ 
+    width: 400px;
+    margin-bottom: 2rem;
 }
 
 #pepperoni-img, #calabresa-img, #portuguesa-img{
