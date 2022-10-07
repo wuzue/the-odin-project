@@ -120,6 +120,7 @@ footer {
 #portuguesa-img, #calabresa-img, #pepperoni-img{ 
     width: 400px;
     margin-bottom: 2rem;
+    border-radius: 50%;
 }
 
 #pepperoni-img, #calabresa-img, #portuguesa-img{
