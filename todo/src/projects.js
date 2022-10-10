@@ -2,12 +2,7 @@
 import { mainDiv } from "./mainDiv";
 import '../assets/styles/projectsStyle.css';
 //import { NormalModuleReplacementPlugin } from "webpack";
-/*
-    PROJECTS
-+project 1
-+project 2
-...
-*/
+
 export function projectsSection(){
     //CREATE MAIN PROJECT DIV
     let projectDiv = document.createElement('div');
@@ -47,6 +42,7 @@ export function projectsSection(){
     projectName.setAttribute('placeholder', 'funny project')
     formDiv.appendChild(projectName);
 
+    /*
     let labelAuthor = document.createElement('label');
     labelAuthor.id = 'label-title2';
     labelAuthor.textContent = 'Admin:'
@@ -79,20 +75,79 @@ export function projectsSection(){
     let priorityThree = document.createElement('option');
     priorityThree.textContent = 'High'
     priority.appendChild(priorityThree);
+    */
 
-    let submitProject = document.createElement('button');
-    submitProject.setAttribute('type', 'submit');
-    submitProject.id = 'submit-project';
-    submitProject.textContent = 'submit';
-    formDiv.appendChild(submitProject);
+    let submitButton = document.createElement('button');
+    submitButton.setAttribute('type', 'submit');
+    submitButton.id = 'submit-project';
+    submitButton.textContent = 'submit';
+    formDiv.appendChild(submitButton);
 
     // FORM DIV IS HIDDEN BY DEFAULT, OPENS WHEN 'NEW PROJECT IS CLICKED'
-    //addBookForm.hidden = true;
+    addBookForm.hidden = true;
 
     //WHEN CLICK ON NEW PROJECT, IT CREATES A NEW PROJECT :p > p fazer
     let newProjectBtn = document.querySelector('#new-project');
     newProjectBtn.addEventListener('click', () => {
-        //addBookForm.hidden = false;
+        addBookForm.hidden = false;
+        newProject.hidden = true;
     });
-    
+
+    let projectList = document.createElement('ul');
+    projectList.id = 'project-list';
+    projectDiv.appendChild(projectList);
+
+    class Project {
+        constructor(pName){
+            this.pName = pName;
+        }
+    }
+
+    let btn = document.querySelector('#submit-project');
+    let elementUl = document.querySelector('#project-list');
+
+    let projects = [];
+
+    // DEFAULT PROJECT
+    let defaultProject = document.createElement('li');
+    defaultProject.id = 'default-project';
+    defaultProject.textContent = 'Default'
+    projectList.appendChild(defaultProject);
+
+    function addElement(book){
+
+        //convert elements to p, to save project info
+        let elementName = document.createElement('p');
+
+        //li element to hold project info
+        let projectElement = document.createElement('li');
+        projectElement.setAttribute('class', 'li-projects');
+
+        let nameContent = document.createTextNode(book.pName);
+
+        elementName.appendChild(nameContent);
+
+        projectElement.appendChild(elementName);
+
+        //add li element to list
+        elementUl.appendChild(projectElement);
+    }
+
+    function submitProject(event){
+        event.preventDefault();
+
+        let nameInput = document.querySelector('#name-input');
+
+        let pName = document.querySelector('#name-input').value;
+
+        let project = new Project(pName);
+        projects.push(project);
+        addElement(project);
+
+        nameInput.value = '';
+
+        addBookForm.hidden = true;
+        newProjectBtn.hidden = false;
+    }
+    btn.addEventListener('click', submitProject);
 }

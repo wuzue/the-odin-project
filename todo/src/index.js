@@ -2,6 +2,7 @@
 
 import './mainDiv';
 import { mainContainer } from "./mainDiv";
+import { notes } from './notes';
 import './projects';
 import { projectsSection } from "./projects";
 import { toDos } from './todos';
@@ -9,3 +10,4 @@ import { toDos } from './todos';
 mainContainer();
 projectsSection();
 toDos();
+notes();

@@ -1,0 +1,17 @@
+#todo-div{
+    float:left;
+    background-color: rgb(255, 216, 145);
+    width: 50%;
+}
+
+#todo-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+#todo-list {
+    list-style: none;
+    text-align: center;
+}
