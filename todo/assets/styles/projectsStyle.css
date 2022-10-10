@@ -1,0 +1,44 @@
+* {
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#project-title{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+#new-project{
+    font-size: 1rem;
+    color: gray;
+    width: 130px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin:auto;
+
+}
+
+#new-project:hover {
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#project-div{
+    background-color: rgb(255, 182, 182);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#add-book-form {
+    background-color: rgb(255, 200, 200);
+}
+
+#add-book-form input, #submit-project {
+    display: block;
+}
