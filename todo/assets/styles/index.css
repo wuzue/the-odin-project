@@ -1,0 +1,27 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,88,92,1) 0%, rgba(227,173,236,1) 100%);
+}
+
+#input-task {
+    width: 400px;
+    height: 30px;
+}
+
+#input-btn {
+    height: 35px;
+}
+
+#main-container {
+    text-align: center;
+}
+
+#task-item {
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+}
