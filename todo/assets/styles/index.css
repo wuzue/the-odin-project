@@ -3,25 +3,20 @@ body {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,88,92,1) 0%, rgba(227,173,236,1) 100%);
 }
 
-#input-task {
-    width: 400px;
-    height: 30px;
+.fall{
+    transform: translateY(10rem) rotate(20deg);
+    opacity: 0;
 }
 
-#input-btn {
-    height: 35px;
+.completed{
+    text-decoration: line-through;
 }
 
-#main-container {
-    text-align: center;
+.fa-trash, .fa-check{
+    pointer-events: none;
 }
 
-#task-item {
-    font-size: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: capitalize;
-}
-
-li {
-    list-style: none;
+.select {
+    position: absolute;
+    right: 70%;
 }
